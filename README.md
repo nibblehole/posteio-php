@@ -4,7 +4,7 @@ Poste.io is a full-featured mail server that features a REST API for tasks like 
 
 ## Installation
 
-1. Install using Composer
+1. Install it using Composer
 
 ```
 composer require tormjens/posteio
