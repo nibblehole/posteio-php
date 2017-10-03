@@ -41,7 +41,7 @@ If you're using Laravel 5.5, you can go ahead and skip to number 3.
 Instantiate the class like so:
 
 ```php
-    $posteio = new TorMorten\Posteio\Client('https://myhost.com', 'email@myhost.com', 'secret');
+$posteio = new TorMorten\Posteio\Client('https://myhost.com', 'email@myhost.com', 'secret');
 ```
 
 ## Usage
@@ -55,17 +55,17 @@ In Laravel the client is bound to the service container and can be instantiated 
 The first is via dependency injection.
 
 ```php 
-    Route::post('create-account', function(TorMorten\Posteio\Client $posteio) {
-        $posteio->boxes()->create(['name' => 'John Doe', 'email' => 'john@myhost.com']);
-    });
+Route::post('create-account', function(TorMorten\Posteio\Client $posteio) {
+    $posteio->boxes()->create(['name' => 'John Doe', 'email' => 'john@myhost.com']);
+});
 ```
 
 The second is via resolving it via the service container.
 
 ```php
-    app('posteio')->boxes()->create(['name' => 'John Doe', 'email' => 'john@myhost.com']);
-    // or
-    app('TorMorten\Posteio\Client')->boxes()->create(['name' => 'John Doe', 'email' => 'john@myhost.com']);
+app('posteio')->boxes()->create(['name' => 'John Doe', 'email' => 'john@myhost.com']);
+// or
+app('TorMorten\Posteio\Client')->boxes()->create(['name' => 'John Doe', 'email' => 'john@myhost.com']);
 ```
 
 ## TODO
