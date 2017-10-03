@@ -46,7 +46,7 @@ Instantiate the class like so:
 
 ## Usage
 
-The API is split into two services; boxes and domains. Both have the same CRUD functions. You can find the complete documentation of what each resource takes a its parameters on their (API docs/sandbox)[https://poste.io/demo].
+The API is split into two services; boxes and domains. Both have the same CRUD functions. You can find the complete documentation of what each resource takes a its parameters on their [API docs/sandbox](https://poste.io/demo).
 
 ### Laravel
 
