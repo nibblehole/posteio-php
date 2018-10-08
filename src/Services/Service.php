@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace TorMorten\Posteio\Services;
 
@@ -15,11 +15,24 @@ abstract class Service
 
     public function getEndpoint()
     {
-        return strtolower(class_basename(static::class));
+        return strtolower($this->classBasename(static::class));
     }
 
     public function all($filters = null)
     {
         return $this->client->request('GET', $this->getEndpoint(), $filters);
+    }
+
+    /**
+     * Get the class "basename" of the given object / class.
+     *
+     * @param  string|object $class
+     * @return string
+     */
+    protected function classBasename($class)
+    {
+        $class = is_object($class) ? get_class($class) : $class;
+
+        return basename(str_replace('\\', '/', $class));
     }
 }
